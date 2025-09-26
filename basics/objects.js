@@ -98,13 +98,26 @@ const users= [
 ]
 
 users[1].email
-console.log(jsuser1);
+// console.log(jsuser1);
 
-console.log(Object.keys(jsuser1));
-console.log(Object.values(jsuser1));
-console.log(Object.entries(jsuser1));
+// console.log(Object.keys(jsuser1));
+// console.log(Object.values(jsuser1));
+// console.log(Object.entries(jsuser1));
 
-console.log(jsuser1.hasOwnProperty(`isloggedout`));
+// console.log(jsuser1.hasOwnProperty(`isloggedout`));
+
+//destructuring of object
+const course = {
+    name : "javascript",
+    price : "999",
+    instructor : "Hitesh"
+}
+
+const {instructor : ins} = course   // this is destructuring
+console.log(ins);
+
+
+
 
 
 
