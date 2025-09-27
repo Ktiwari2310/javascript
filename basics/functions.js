@@ -81,6 +81,9 @@ function handlearray(getarray){
 
 console.log(handlearray(calculatecartprice(200, 500, 7000)));  // passing function in function
 
+// three data types--> var, const, let 
+// const and let only limited to the scope but var is not limited
+
 
 
  
