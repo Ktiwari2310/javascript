@@ -68,10 +68,14 @@ handleobject({
 // we have passed object now lets pass array
 
 const myarray =[200,400, 600]
-
+let sum =0
 function handlearray(getarray){
-  
-    return getarray[1]+ getarray[0]+getarray[2]
+   for (let i=0;i< getarray.length;i++) {
+
+    sum = sum + getarray[i]
+   }
+   return sum;
+    
     
 }
 
@@ -79,7 +83,7 @@ function handlearray(getarray){
 // console.log(handlearray([200,1000,5000]));
 
 
-console.log(handlearray(calculatecartprice(200, 500, 7000)));  // passing function in function
+console.log(handlearray(calculatecartprice(200, 500, 7000,5000,8000)));  // passing function in function
 
 // three data types--> var, const, let 
 // const and let only limited to the scope but var is not limited
