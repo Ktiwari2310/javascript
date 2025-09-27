@@ -38,7 +38,7 @@ function calculatecartprice(...num1){  //... is rest
     return num1;
     
 }
- console.log(calculatecartprice(200, 500, 7000));   //[ 200, 500, 7000 ]  return as array
+//  console.log(calculatecartprice(200, 500, 7000));   //[ 200, 500, 7000 ]  return as array
 
 
 
@@ -56,7 +56,7 @@ const user = {
 }
 
 function handleobject(anyobject){
-    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+    // console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
 
 }
 
@@ -83,10 +83,40 @@ function handlearray(getarray){
 // console.log(handlearray([200,1000,5000]));
 
 
-console.log(handlearray(calculatecartprice(200, 500, 7000,5000,8000)));  // passing function in function
+// console.log(handlearray(calculatecartprice(200, 500, 7000,5000,8000)));  // passing function in function
 
 // three data types--> var, const, let 
 // const and let only limited to the scope but var is not limited
+
+//chhote bado se ice-cream le sakte hai but bade chhoto se nhi
+
+function one(){
+    const username = "Khushboo"
+
+    function two(){
+        const website = "Youtube"
+        console.log(username);   // prints Khushboo
+        
+    }
+    // console.log(website);   --> cant acces as it is local 
+    
+    // two();
+}
+
+one();
+
+if(true){
+    const username = "Kt"
+        if(username==="Kt"){
+            const website=" Youtube"
+            // console.log(username+website);
+            
+        }
+        // console.log(website);  --> cannot access this
+        
+}
+// console.log(username);  //--> cannot access this
+
 
 
 
