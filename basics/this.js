@@ -53,10 +53,24 @@ const chai =  () =>{                  //this is arrow function
 // const addTWo = (num1,num2) =>  num1 + num2
 // const addTWo = (num1,num2) =>  (num1 + num2)
 // const addTWo = (num1,num2) => { username : "Hitesh"}  // undefined
-const addTWo = (num1,num2) => ({ username : "Hitesh"})
+// const addTWo = (num1,num2) => ({ username : "Hitesh"})
 
 
-console.log(addTWo(3,5));
+// console.log(addTWo(3,5));
+
+
+// Immediately Invoked function Expression (IIFE)  global scope ke pollution se problem hoti hai , to remove that we have used IIFE
+(function chai(name) {
+    //this is named IIFE
+    console.log(`Hi ${name}`);
+})("Khushboo");
+
+((name)=>{
+    //simple IIFE unnamed,
+     console.log(`Hi ${name}`);
+}
+
+)("K");
 
 
 
