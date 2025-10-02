@@ -6,6 +6,8 @@
 //     console.log("Hi");   
 // }
 
+const { useContext } = require("react");
+
 // saymyname();
 // saymyname();
 // saymyname();
@@ -116,8 +118,34 @@ if(true){
         
 }
 // console.log(username);  //--> cannot access this
+/*
+javascipt execution useContext
+browser --> global ec "this"
+js is single threaded
+
+1.global ec
+2.functional ec
+3.eval ec
+
+how js execute--> 2 phase, 1. memory creation phase  2. execution phase
+1.--> memory is located nd execution in phase 2
+
+sabse pehle this me locate hota hai code with global execution
+memory phase me variables rakha jata hai with undefined, function me jaati hai defintion fxn ki
+1st cycle
+
+now cycle 2 execution pahse
+variables ke andar actual values jaati hai, function call--> again an execution context -- new variable environment + execution thraed that means ab function ke liye memory pahse and execution pahse dono hota hai wapas jab bhi fxn call hota hai
+"return value" global execution context me ho jaati hai  
+ek baar kaam hone ke baad woh delete ho jata hai
 
 
+call stack--> global enecution context/ environment
+jab fxn execute karna hota hai toh satck me le jaate hai , jab execute ho jata hai toh hata dete hai
+ek fxn me fxn me kya hota hai--> kon bahar pehle niklega? LIFO chlta hai that means sabse last me jane wala pehle execute hota hai
+
+
+*/
 
 
  
