@@ -93,10 +93,10 @@ const coding = ["java","cpp","js","ruby"]
 // }
 // coding.forEach(printme)
 
-coding.forEach((item,index,arr)=>{
-    // console.log(item,index,arr);
+// // coding.forEach((item,index,arr)=>{
+//     // console.log(item,index,arr);
     
-})
+// })
 // o/p
 // java 0 [ 'java', 'cpp', 'js', 'ruby' ]
 // cpp 1 [ 'java', 'cpp', 'js', 'ruby' ]
@@ -119,8 +119,121 @@ const mycoding = [
     }
 ]
 
-mycoding.forEach((item)=>{
+// mycoding.forEach((item)=>{
 
-    console.log(item.lang_file);
+//     console.log(item.lang_file);
     
-})
+// })
+
+
+
+//  const values = coding.forEach((item)=>{
+//     console.log(item);
+    
+// })
+
+// console.log(values);  //returns undefined
+
+//filter()
+
+const mynums = [1,2,3,4,5,6,7,8,9,10]
+
+// const newnums = mynums.filter((num)=>num>5)
+// console.log(newnums); // [ 5, 6, 7, 8, 9, 10 ]
+
+
+
+// const newnums = mynums.filter((num)=>{
+//      num>4
+// })
+// console.log(newnums);  //[]
+
+// const newnums = mynums.filter((num)=>{
+//     return  num>4
+// })
+// console.log(newnums); //[ 5, 6, 7, 8, 9, 10 ]
+
+
+// const newnums=[]
+
+// mynums.forEach((item)=>{
+//     if (item>4) {
+//         newnums.push(item)
+//     }
+// })
+// console.log(newnums);  //[ 5, 6, 7, 8, 9, 10 ]
+
+//one eg
+// created an array consisting of various objects each having book title, genre and publish, now i want all the books with genre history
+// const user = books.filte((bk)=>{
+//     return bk.genre==='History'
+// })
+// console.log(user);
+// this will return all the books having genre history but it will return the object whole all the details 
+
+
+//map()
+const mynumbers = [1,2,3,4,5,6,7,8,9,10]
+//  const mynums1= mynumbers.map((num)=>{ return num+10})
+//  console.log(mynums1);
+
+//chaining
+
+const mynums2=mynumbers
+                        .map((num)=> num*10)
+                        .map((num)=>num+1)
+                        .filter((num)=>num>40)    //[
+                                                    //   41, 51,  61, 71,
+                                                    //   81, 91, 101
+                                                    // ]
+
+// console.log(mynums2);
+
+
+//reduce()
+//useful for cart
+
+const myarr=[1,2,3]
+
+// const mytotal = myarr.reduce(function (acc,curr) {
+//     console.log(`acc :${acc}, curr:${curr}`);
+    
+//     return acc+ curr
+
+// },3)
+
+
+// const mytotal = myarr.reduce((acc,curr)=>{return acc+curr},0)
+
+
+// console.log(mytotal);
+// acc :3, curr:1
+// acc :4, curr:2
+// acc :6, curr:3
+// 9
+
+
+
+const shoppingcart = [
+    {
+        itemname: "js course",
+        price : 2999
+    },
+     {
+        itemname: "cpp course",
+        price : 3999
+    },
+     {
+        itemname: "java course",
+        price : 2000
+    },
+     {
+        itemname: "ruby course",
+        price : 1999
+    },
+]
+
+const total = shoppingcart.reduce((acc,item)=>{return acc+ item.price},0)
+console.log(total);
+
+ 
