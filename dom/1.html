@@ -12,20 +12,38 @@
     </style>
 </head>
 <body class="bg-black">
-    <div >
-        <h1 id="title"class="heading">Dom learning on chai aur code <span style=" display : none">test text</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <h2 id = "1st">Lorem ipsum dolor sit amet.</h2>
-        <h2 id = "2nd">Lorem ipsum dolor sit amet.</h2>
-        <h2 id = "3rd">Lorem ipsum dolor sit amet.</h2>
-        <h2 id = "4th">Lorem ipsum dolor sit amet.</h2>
-        <input type="password"  id="password">
-        <ul>
-            <li class="list">one</li>
-            <li class="list">two</li>
-            <li class="list">three</li>
-            <li class="list">four</li>
-        </ul>
-    </div>
+    
+        <div class="parent">
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
+        </div>
+    
+    <script>
+       const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[0].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+        
+    // }
+
+    // parent.children[0].style.color="red";
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+    
+
+   const day1 =  document.querySelector('.day')
+//    console.log(day1.parentElement);
+//    console.log(day1.nextElementSibling);
+
+   console.log("NODES: ",parent.childNodes);
+   
+   
+
+    </script>
 </body>
 </html>
