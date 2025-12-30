@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "orange">Orange</button> 
+    <button id="green">Green</button>
+</body>
+<script>
+    //  function init (){
+    //     let name = "Khushboo"
+
+    //     function displayName(){
+    //         console.log(name);
+            
+    //     }
+    //     displayName();
+    //  }
+
+    //  init();
+
+
+    //this is lexical scoping
+    function outer(){
+        let username = "Khushboo"
+
+        function inner(){
+            console.log(username);  // has access  
+        }
+        inner();
+    }
+
+    outer();
+
+    console.log(username); //has no access here
+
+
+    //Closure: isme sirf function nhi return hota uska lexical scope return hota hai    
+</script>
+<script>
+
+    //Closure: isme sirf function nhi return hota uska lexical scope return hota hai    
+
+    //i want when clicked on orange it should turn the bg to orange
+    // document.getElementById('orange').onclick = function()
+    // {
+    //     document.body.style.backgroundColor = "orange"
+    // }
+
+    // document.getElementById('green').onclick = function()
+    // {
+    //     document.body.style.backgroundColor = "green"
+    // }
+
+    //now i want this same for 100 buttons so we are going to write a generic script for that
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}`
+        return function (){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+
+</script>
+</html>
